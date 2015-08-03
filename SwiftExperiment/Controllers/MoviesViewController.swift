@@ -22,7 +22,8 @@ public class MoviesViewController: UIViewController {
         self.moviesPresenter.present(movies: movies, tableView: self.moviesView.tableView)
       } else if let error = error {
         print(error)
-        // do something with the error
+        let alertController = UIAlertController(title: "Error", message: "message", preferredStyle: UIAlertControllerStyle.Alert)
+        self.presentViewController(alertController, animated: true) {}
       }
     }
   }
